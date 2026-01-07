@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ข้อมูลผ้าม่าน</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+window.onload = () => {
+    showPage("home");
+};
+
+function showPage(page) {
+    document.querySelectorAll(".page").forEach(p => p.style.display = "none");
+    document.getElementById(page).style.display = "block";
+}
+
+function showProduct(id) {
+    document.querySelectorAll(".product-box").forEach(box => box.style.display = "none");
+    document.getElementById(id).style.display = "block";
+    document.getElementById("product").scrollIntoView({ behavior: "smooth" });
+}
+</script>
+</head>
+
+<body>
+
+<!-- Banner -->
+<div class="banner">
+    <img src="img/BANNER.jpg" alt="banner">
+</div>
+
+<!-- Menu -->
+<div class="menu">
+    <button onclick="showPage('home')">HOME</button>
+    <button onclick="showPage('product')">PRODUCT</button>
+    <button onclick="showPage('contact')">CONTACT</button>
+</div>
+
+<!-- HOME PAGE -->
+<div id="home" class="page">
+
+<div class="info-text">
+ผ้าม่านเป็นองค์ประกอบสำคัญของบ้าน ไม่ได้มีบทบาทเพียงการกันแสงแดดหรือสร้างความเป็นส่วนตัวเท่านั้น แต่ยังช่วยกำหนดบรรยากาศของห้องให้ดูอบอุ่น หรูหรา หรือโมเดิร์นได้ตามสไตล์ที่ต้องการ โดยแต่ละประเภท เช่น มู่ลี่ ผ้าม่านปรับแสง ผ้าม่านหลุยส์ ผ้าม่านจีบ และผ้าม่านพับ ต่างก็มีคุณสมบัติและการใช้งานที่แตกต่างกัน การเลือกผ้าม่านที่เหมาะสมจะช่วยเสริมความสมดุลและความสวยงามให้พื้นที่ภายในบ้านอย่างลงตัว
+</div>
+
+<h2>ตัวอย่างสินค้า</h2>
+
+<div class="slider-wrapper">
+    <div class="slider">
+        <!-- เรียง 2 รอบเพื่อทำให้ loop ลื่น -->
+        <div class="slide"><img src="img/MULI.jpg"><div class="slide-title">มู่ลี่</div></div>
+        <div class="slide"><img src="img/PUBSANG.jpg"><div class="slide-title">ผ้าม่านปรับแสง</div></div>
+        <div class="slide"><img src="img/LOUIS.jpg"><div class="slide-title">ผ้าม่านหลุยส์</div></div>
+        <div class="slide"><img src="img/JEEP.jpg"><div class="slide-title">ผ้าม่านจีบ</div></div>
+        <div class="slide"><img src="img/PUB.jpg"><div class="slide-title">ผ้าม่านพับ</div></div>
+
+        <div class="slide"><img src="img/MULI.jpg"><div class="slide-title">มู่ลี่</div></div>
+        <div class="slide"><img src="img/PUBSANG.jpg"><div class="slide-title">ผ้าม่านปรับแสง</div></div>
+        <div class="slide"><img src="img/LOUIS.jpg"><div class="slide-title">ผ้าม่านหลุยส์</div></div>
+        <div class="slide"><img src="img/JEEP.jpg"><div class="slide-title">ผ้าม่านจีบ</div></div>
+        <div class="slide"><img src="img/PUB.jpg"><div class="slide-title">ผ้าม่านพับ</div></div>
+    </div>
+</div>
+
+</div>
+
+<!-- PRODUCT PAGE -->
+<div id="product" class="page" style="display:none;">
+
+<h2>เลือกประเภทสินค้า</h2>
+
+<div class="product-buttons">
+    <button onclick="showProduct('p1')">มู่ลี่</button>
+    <button onclick="showProduct('p2')">ผ้าม่านปรับแสง</button>
+    <button onclick="showProduct('p3')">ผ้าม่านหลุยส์</button>
+    <button onclick="showProduct('p4')">ผ้าม่านจีบ</button>
+    <button onclick="showProduct('p5')">ผ้าม่านพับ</button>
+</div>
+
+<!-- PRODUCT ITEM TEMPLATE (ซ้ำ) -->
+<div id="p1" class="product-box" style="display:none;">
+    <div class="product-title">มู่ลี่ (Blinds)</div>
+    <img class="product-img" src="img/MULI.jpg" alt="">
+    <div class="product-desc">
+        <div class="product-desc-title">คุณสมบัติเด่น</div>
+        <ul>
+            <li>ใช้งานง่าย ดึงขึ้น-ลง ด้วยโซ่หรือระบบเชือก</li>
+            <li>เหมาะสำหรับพื้นที่จำกัด เช่น ห้องน้ำ ห้องครัว</li>
+            <li>น้ำหนักเบา ทำความสะอาดง่าย</li>
+            <li>มีให้เลือกหลายวัสดุ เช่น ไม้ อะลูมิเนียม และ PVC</li>
+        </ul>
+    </div>
+</div>
+
+<div id="p2" class="product-box" style="display:none;">
+    <div class="product-title">ผ้าม่านปรับแสง</div>
+    <img class="product-img" src="img/PUBSANG.jpg" alt="">
+    <div class="product-desc">
+        <div class="product-desc-title">คุณสมบัติเด่น</div>
+        <ul>
+            <li>ควบคุมแสงได้ละเอียดมาก</li>
+            <li>เหมาะสำหรับออฟฟิศ บ้านโมเดิร์น</li>
+            <li>ใบตั้งลดฝุ่นได้ดี</li>
+            <li>ช่วยลดความร้อนจากแสงแดด</li>
+        </ul>
+    </div>
+</div>
+
+<div id="p3" class="product-box" style="display:none;">
+    <div class="product-title">ผ้าม่านหลุยส์</div>
+    <img class="product-img" src="img/LOUIS.jpg" alt="">
+    <div class="product-desc">
+        <div class="product-desc-title">คุณสมบัติเด่น</div>
+        <ul>
+            <li>ดีไซน์หรูหรา สวยงาม</li>
+            <li>นิยมใช้ในห้องรับแขก โรงแรม บ้านใหญ่</li>
+            <li>ช่วยเพิ่มมิติให้ห้องดูอลังการ</li>
+        </ul>
+    </div>
+</div>
+
+<div id="p4" class="product-box" style="display:none;">
+    <div class="product-title">ผ้าม่านจีบ</div>
+    <img class="product-img" src="img/JEEP.jpg" alt="">
+    <div class="product-desc">
+        <div class="product-desc-title">คุณสมบัติเด่น</div>
+        <ul>
+            <li>สวยเป็นระเบียบดูเรียบหรู</li>
+            <li>เหมาะกับทุกพื้นที่ ทั้งบ้าน คอนโด และโรงแรม</li>
+            <li>เข้ากับหลากหลายสไตล์การตกแต่ง</li>
+        </ul>
+    </div>
+</div>
+
+<div id="p5" class="product-box" style="display:none;">
+    <div class="product-title">ผ้าม่านพับ</div>
+    <img class="product-img" src="img/PUB.jpg" alt="">
+    <div class="product-desc">
+        <div class="product-desc-title">คุณสมบัติเด่น</div>
+        <ul>
+            <li>ประหยัดพื้นที่มาก</li>
+            <li>เหมาะกับบ้าน/คอนโดที่มีพื้นที่แคบ</li>
+            <li>ดีไซน์เรียบง่าย แต่ทันสมัย</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page" style="display:none;">
+    <h2>ช่องทางการติดต่อ</h2>
+    <div class="contact-box">
+        📞 โทร: 093-221-0710 / 061-8637491<br>
+        💬 ร้านผ้านร่วมใจพิษณุโลก 245/6 ถนนบึงพระจันท์ ตำบลในเมือง อำเภอเมือง จังหวัดพิษณุโลก
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    สนใจสินค้าสอบถามได้ที่ 📞 093-221-0710 / 061-863-7491
+</div>
+
+</body>
+</html>
